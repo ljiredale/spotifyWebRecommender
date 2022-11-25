@@ -1,0 +1,368 @@
+/* CSS HEX 
+--black-chocolate: #131200ff;
+--mantis: #78bc61ff;
+--dark-khaki: #c0c781ff;
+--camel: #c59b76ff;
+--salmon: #e9806eff;
+*/
+
+body{
+    background-color: #000000;
+}
+
+.titleh1 {
+    color:#1DB954;
+    text-align:center;
+}
+p {
+    text-align:center;
+    color:#1DB954
+}
+.divider {
+    height:120px;
+}
+#inpbut {
+    background-color:#1DB954;
+    border-color:#000000;
+    display: block;
+    margin : 0 auto;
+}
+.icon {
+    width:50px;
+    height:50px;
+    position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+.icontext {
+    color: white;
+    position: absolute;
+    top: 0px;
+    right: 80px;
+    font-size: 40px;
+}
+#tokenSection{
+    display: none;
+}
+
+#suggestionSection{
+    display:none;
+}
+
+#finalButtonSubmitSection{
+    display:none;
+}
+
+#searchSection {
+    display:none;
+}
+
+#deviceSection{
+    display: none;
+}
+
+.container{
+    padding: 20px;    
+    background-color: black;
+}
+
+#albumImage{
+    width: 300px;
+    float: left;
+    margin: 20px;
+}
+h1 {
+    text-align:center;
+}
+#trackTitle{
+    font-size:3em;
+}
+
+#trackArtist{
+    font-size:2em;
+}
+
+.welcomeText{
+    font-size:2em;
+}
+a {
+    text-decoration:none;
+}
+
+#select {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+  }
+h1 {
+    color:white;
+}
+h2 {
+    color: white;
+}
+#headDiv {
+    border-style:solid;
+    border-color:#1DB954;
+    border-width:5px;
+    text-align:center;
+}
+#search {
+    border-style:solid;
+    border-color:#1DB954;
+    border-width:5px;
+    text-align:center;
+}
+#RPS {
+    border-style:solid;
+    border-color:#1DB954;
+    border-width:5px;
+    text-align:center;
+}
+#topPla {
+    border-style:solid;
+    border-color:#1DB954;
+    border-width:5px;
+    text-align:center;
+}
+#selected {
+    border-style:solid;
+    border-color:#1DB954;
+    border-width:5px;
+    text-align:center;
+}
+#devSecDiv {
+    height:30px;
+}
+input[type=button] {
+    padding: 5px;
+    border: 2px solid #cccccc;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    color:white;
+    font-size:26pt;
+    font-weight:500;
+  }
+  input[type=button]:focus {
+    border-color: #000000;
+  }
+  input[type=button]:hover{
+    color:darkgrey;
+  }
+  input[type=button] {
+    padding: 5px 15px;
+    background: #000000;
+    border: 0 none;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+  }
+  input[type=text] {
+    display:block;
+    margin:auto;
+    border-radius: 25px;
+    border: 2px solid #609;
+    padding: 20px; 
+    width: 700px;
+    height: 15px;
+  }
+.goBackDiv {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
+}
+input[type=submit] {
+    display:block;
+    margin:auto;
+    margin-top:auto;
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    width:200px;
+    height:40px;
+  }
+#songtitle1, #songtitle2, #songtitle3 , #songtitle4, #songtitle5{
+    padding-top:0px;
+    text-align:center;
+    color:#1DB954;
+    font-size:90%;
+}
+#songdiv1, #songdiv2, #songdiv3, #songdiv4, #songdiv5 {
+    display:none;
+    background-color:black;
+    width:19.5%;
+    height:300px;
+    padding:0px;
+}
+#songpic1, #songpic2, #songpic3, #songpic4, #songpic5 {
+    display:block;
+    margin:auto;
+    height:150px;
+    width:150px;
+    padding-bottom:0px;
+}
+#artist1, #artist2, #artist3, #artist4, #artist5 {
+    font-size:90%;
+    text-align:center;
+    color:#1DB954
+}
+.dividesr {
+    height:100px;
+}
+.playButton {
+    color:black;
+}
+.selectButton {
+  appearance: none;
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  margin:auto;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+
+.selectButton:focus:not(:focus-visible):not(.focus-visible) {
+box-shadow: none;
+outline: none;
+}
+.selectButton:hover {
+background-color: #2c974b;
+}
+
+.selectButton:focus {
+box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+outline: none;
+}
+
+.selectButton:disabled {
+background-color: #94d3a2;
+border-color: rgba(27, 31, 35, .1);
+color: rgba(255, 255, 255, .8);
+cursor: default;
+}
+
+.selectButton:active {
+background-color: #298e46;
+box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+.flex-parent {
+    display: flex;
+  }
+  
+  .jc-center {
+    justify-content: center;
+  }
+  
+  button.margin-right {
+    margin-right: 20px;
+  }
+#seltitle1, #seltitle2, #seltitle3 , #seltitle4, #seltitle5{
+    padding-top:0px;
+    text-align:center;
+    color:#1DB954;
+    font-size:90%;
+}
+#seldiv1, #seldiv2, #seldiv3, #seldiv4, #seldiv5 {
+    display:none;
+    background-color:black;
+    width:19.5%;
+    height:300px;
+    padding:0px;
+}
+#selpic1, #selpic2, #selpic3, #selpic4, #selpic5 {
+    display:block;
+    margin:auto;
+    height:150px;
+    width:150px;
+    padding-bottom:0px;
+}
+#selartist1, #selartist2, #selartist3, #selartist4, #selartist5 {
+    font-size:90%;
+    text-align:center;
+    color:#1DB954
+}
+#rptitle1, #rptitle2, #rptitle3 , #rptitle4, #rptitle5{
+    padding-top:0px;
+    text-align:center;
+    color:#1DB954;
+    font-size:90%;
+}
+#rpdiv1, #rpdiv2, #rpdiv3, #rpdiv4, #rpdiv5 {
+    display:none;
+    background-color:black;
+    width:19.5%;
+    height:300px;
+    padding:0px;
+}
+#rppic1, #rppic2, #rppic3, #rppic4, #rppic5 {
+    display:block;
+    margin:auto;
+    height:150px;
+    width:150px;
+    padding-bottom:0px;
+}
+#rpartist1, #rpartist2, #rpartist3, #rpartist4, #rpartist5 {
+    font-size:90%;
+    text-align:center;
+    color:#1DB954
+}
+
+#genreSection {
+    display:none;
+}
+#rectitle1, #rectitle2, #rectitle3 , #rectitle4, #rectitle5, #rectitle6, #rectitle7, #rectitle8, #rectitle9, #rectitle10{
+    padding-top:0px;
+    text-align:center;
+    color:#1DB954;
+    font-size:90%;
+}
+#recdiv1, #recdiv2, #recdiv3, #recdiv4, #recdiv5, #recdiv6, #recdiv7, #recdiv8, #recdiv9, #recdiv10 {
+    display:none;
+    background-color:black;
+    width:19.5%;
+    height:300px;
+    padding:0px;
+}
+#recpic1, #recpic2, #recpic3, #recpic4, #recpic5, #recpic6, #recpic7, #recpic8, #recpic9, #recpic10 {
+    display:block;
+    margin:auto;
+    height:150px;
+    width:150px;
+    padding-bottom:0px;
+}
+#recartist1, #recartist2, #recartist3, #recartist4, #recartist5, #recartist6, #recartist7, #recartist8, #recartist9, #recartist10 {
+    font-size:90%;
+    text-align:center;
+    color:#1DB954
+}
+#createPlaylistButton{
+    width:100px;
+}

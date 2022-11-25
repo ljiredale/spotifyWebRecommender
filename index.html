@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Web API Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="styleapi.css" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+
+<body onload="onPageLoad()">
+    <div class="container">
+
+        <div id="tokenSection" class="row">
+            <div class="col">             
+            </div>
+            <div class="col">
+                <h1 class = "titleh1">Spotify Song Recommender</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque facere aperiam sapiente dolores doloremque molestiae perferendis iure. Facere dolores ullam eligendi veritatis odio eos aliquam porro, nam voluptatem quae fuga.</p><br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab eligendi illum ut est obcaecati? Aliquam omnis beatae sit, ipsa totam inventore quisquam eos ut. Saepe tempore ratione error vero fuga.</p>
+                <div class = "divider"></div>
+                <a href = "https://www.spotify.com/us/signup"><input class="btn btn-primary btn-lg" id = "inpbut" type = "button"  value = "Register for Spotify"></a>
+                <div class = "divider"></div>
+                <input class="btn btn-primary btn-lg" id = "inpbut" type="button" onclick="requestAuthorization()" value="Log In and Continue"><br/>
+            </div>
+        </div>
+
+        <div id="deviceSection" class="row">
+            <div id = "headDiv">
+                <h1>Select Songs to Create Suggested Playlist</h1>
+
+            </div>
+            <div id = "devSecDiv"></div>
+            <div id = "search">
+                <h2><input type = "button" value = "Search For Songs" onclick="changeSearchStatus()"></h2>
+                
+            </div>
+            <div id = "devSecDiv"></div>
+            <div id = "RPS"><!--recently played songs-->
+                <h2>Recently Played Songs
+                </h2>
+                <div id = rpdiv1>
+                    <img src="" id = "rppic1">
+                    <h1 id = rptitle1></h1>
+                    <h2 id = rpartist1></h2>
+                    <div class="flex-parent jc-center">
+                        <button class = "selectButton" onclick = rpsongSelected(1)>Select</button>
+                    </div>
+                </div>
+                <div id = rpdiv2>
+                    <img src="" id = "rppic2">
+                    <h1 id = rptitle2></h1>
+                    <h2 id = rpartist2></h2>
+                    <div class="flex-parent jc-center">
+                        <button class = "selectButton" onclick = rpsongSelected(2)>Select</button>
+                    </div>
+                </div>
+                <div id = rpdiv3>
+                    <img src="" id = "rppic3">
+                    <h1 id = rptitle3></h1>
+                    <h2 id = rpartist3></h2>
+                    <div class="flex-parent jc-center">
+                        <button class = "selectButton" onclick = rpsongSelected(3)>Select</button>
+                    </div>
+                </div>
+                <div id = rpdiv4>
+                    <img src="" id = "rppic4">
+                    <h1 id = rptitle4></h1>
+                    <h2 id = rpartist4></h2>
+                    <div class="flex-parent jc-center">
+                        <button class = "selectButton" onclick = rpsongSelected(4)>Select</button>
+                    </div>
+                </div>
+                <div id = rpdiv5>
+                    <img src="" id = "rppic5">
+                    <h1 id = rptitle5></h1>
+                    <h2 id = rpartist5></h2>
+                    <div class="flex-parent jc-center">
+                        <button class = "selectButton" onclick = rpsongSelected(5)>Select</button>
+                    </div>
+                </div>
+            </div>
+            <div id = "devSecDiv"></div>
+            <div id = "selected">
+                <h2>Selected</h2>
+                <div id = seldiv1>
+                    <img src="" id = "selpic1">
+                    <h1 id = seltitle1></h1>
+                    <h2 id = selartist1></h2>
+                </div>
+                <div id = seldiv2>
+                    <img src="" id = "selpic2">
+                    <h1 id = seltitle2></h1>
+                    <h2 id = selartist2></h2>
+                </div>
+                <div id = seldiv3>
+                    <img src="" id = "selpic3">
+                    <h1 id = seltitle3></h1>
+                    <h2 id = selartist3></h2>
+                </div>
+                <div id = seldiv4>
+                    <img src="" id = "selpic4">
+                    <h1 id = seltitle4></h1>
+                    <h2 id = selartist4></h2>
+                </div>
+                <div id = seldiv5>
+                    <img src="" id = "selpic5">
+                    <h1 id = seltitle5></h1>
+                    <h2 id = selartist5></h2>
+                </div>
+
+            </div>
+        </div>
+
+        <div id = "searchSection" class = "row">
+            <div name = "goBackDiv">
+                <input type = "button" value = "Go Back" onclick = "goBackFunc()">
+            
+            </div>
+            <div name = "icon">
+                <img src="icon.png" class = "icon">
+                <h1 class = "icontext">Spotify</h1>
+                
+            </div>
+            <div name = "dividesr"></div>
+            <input type = "text" placeholder = "Search.." id = "searchInput">
+            <div name = "searchContainer">
+                <div id = songdiv1>
+                    <img src="" id = "songpic1">
+                    <h1 id = songtitle1></h1>
+                    <h2 id = artist1></h2>
+                    <div class="flex-parent jc-center">
+                        <button class = "selectButton" onclick = songSelected(1)>Select</button>
+                    </div>
+                </div>
+                <div id = songdiv2>
+                    <img src="" id = "songpic2">
+                    <h1 id = songtitle2></h1>
+                    <h2 id = artist2></h2>
+                    <div class="flex-parent jc-center">
+                        <button class = "selectButton" onclick = songSelected(2)>Select</button>
+                    </div>
+                </div>
+                <div id = songdiv3>
+                    <img src="" id = "songpic3">
+                    <h1 id = songtitle3></h1>
+                    <h2 id = artist3></h2>
+                    <div class="flex-parent jc-center">
+                        <button class = "selectButton" onclick = songSelected(3)>Select</button>
+                    </div>
+                </div>
+                <div id = songdiv4>
+                    <img src="" id = "songpic4">
+                    <h1 id = songtitle4></h1>
+                    <h2 id = artist4></h2>
+                    <div class="flex-parent jc-center">
+                        <button class = "selectButton" onclick = songSelected(4)>Select</button>
+                    </div>
+                </div>
+                <div id = songdiv5>
+                    <img src="" id = "songpic5">
+                    <h1 id = songtitle5></h1>
+                    <h2 id = artist5></h2>
+                    <div class="flex-parent jc-center">
+                        <button class = "selectButton" onclick = songSelected(5)>Select</button>
+                    </div>
+                </div>
+        
+            </div>
+            <input type = "submit" onclick="changeSongTitle()" >
+
+
+        </div>
+
+        <div id = "finalButtonSubmitSection" class = "row" onclick = "finalButtonSubmit()">
+            <input type = "button" value = "Create Recommended Playlist" onclick = "finalButtonSubmit">
+        </div>
+        <div id = "suggestionSection" class = "row">
+            <h1>Suggested Songs</h1>
+            <div class = "suggestedSongs">
+                <div name = "recContainer">
+                    <div id = recdiv1>
+                        <img src="" id = "recpic1">
+                        <h1 id = rectitle1></h1>
+                        <h2 id = recartist1></h2>
+                    </div>
+                    <div id = recdiv2>
+                        <img src="" id = "recpic2">
+                        <h1 id = rectitle2></h1>
+                        <h2 id = recartist2></h2>
+                    </div>
+                    <div id = recdiv3>
+                        <img src="" id = "recpic3">
+                        <h1 id = rectitle3></h1>
+                        <h2 id = recartist3></h2>
+                    </div>
+                    <div id = recdiv4>
+                        <img src="" id = "recpic4">
+                        <h1 id = rectitle4></h1>
+                        <h2 id = recartist4></h2>
+                    </div>
+                    <div id = recdiv5>
+                        <img src="" id = "recpic5">
+                        <h1 id = rectitle5></h1>
+                        <h2 id = recartist5></h2>
+                    </div>
+                    <div id = recdiv6>
+                        <img src="" id = "recpic6">
+                        <h1 id = rectitle6></h1>
+                        <h2 id = recartist6></h2>
+                    </div>
+                    <div id = recdiv7>
+                        <img src="" id = "recpic7">
+                        <h1 id = rectitle7></h1>
+                        <h2 id = recartist7></h2>
+                    </div>
+                    <div id = recdiv8>
+                        <img src="" id = "recpic8">
+                        <h1 id = rectitle8></h1>
+                        <h2 id = recartist8></h2>
+                    </div>
+                    <div id = recdiv9>
+                        <img src="" id = "recpic9">
+                        <h1 id = rectitle9></h1>
+                        <h2 id = recartist9></h2>
+                    </div>
+                    <div id = recdiv10>
+                        <img src="" id = "recpic10">
+                        <h1 id = rectitle10></h1>
+                        <h2 id = recartist10></h2>
+                    </div>
+                    <input type = "submit" value = "Create Playlist" onclick = createPlaylist()>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+
+
